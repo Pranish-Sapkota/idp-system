@@ -24,7 +24,7 @@ def get_backend_url() -> str:
     try:
         return st.secrets["BACKEND_URL"]
     except Exception:
-        return os.getenv("BACKEND_URL", "http://localhost:8000")
+        return os.getenv("BACKEND_URL", "https://api-idp-backend.onrender.com/")
 
 BACKEND_URL = get_backend_url()
 API_PROCESS = f"{BACKEND_URL}/api/v1/process"
